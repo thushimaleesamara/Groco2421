@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groco store</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js" defer></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+   <!--Using Fav Icons-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+   
+
+<!--fontawsome for menu icons-->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+
+
+
+
+
+
+</head>
+<body>
+    <nav class="navigation">
+      <a href="index.html" class="logo"> <i class="fas fa-shopping-basket"></i> Groco </a>
+      <section class="nav-links" id="navLinks">
+      <i class="fa fa-times" onclick="hideMenu()"></i>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./Aboutus.html">About Us</a></li>
+        <li><a href="./vegetable.html">Vegetables</a></li>
+        <li><a href="./Dairy.html">Dairy Products</a></li>
+        <li><a href="./Cosmetics.html">Cosmetics</a></li>
+        <li><a href="./index.html">Order</a></li>
+
+        <!--<li><a href="./Loyalty.html"> Loyalty Registration</a></li>-->
+      </ul>
+
+      </section>
+      <!--<legend>Colour</legend>-->
+      
+    <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+       
+       function showMenu(){
+         navLinks.style.right = "0";
+      
+      }
+      
+      function hideMenu(){
+         navLinks.style.right = "-200px";
+         
+      }
+      </script>
+<h1>Order Page</h1>
+
+<!-- Fruits Section -->
+<section class="products-sections">
+<section id="fruits">
+    <h2>Fresh Fruits</h2>
+    <div class="product">
+        <div class="item">
+            <img src="./images/buy1.jpg" alt="Apple">
+            <p>Apple</p>
+            <span >1Kg :RS.500.00</span>
+            <label for="apple-quantity">Apple Quantity:
+                <input type="number" id="apple-quantity" min="0" step="0.1" value="0">
+            </label>
+            <button class="add-button" onclick="addItem('Apple', 'Fruits')">Order Now</button>
+        </div>
+        <div class="item">
+            <img src="./images/banana.jpeg" alt="Banana">
+            <p>Banana</p>
+            <span >1Kg :RS.350.00</span>
+            <label for="banana-quantity">Banana Quantity:
+                <input type="number" id="banana-quantity" min="0" step="0.1" value="0">
+            </label>
+            <button class="add-button" onclick="addItem('Banana', 'Fruits')">Order Now</button>
+        </div>
+        <div class="item">
+            <img src="./images/orange.webp" alt="Orange">
+            <p>Orange</p>
+            <span >1Kg :RS.400.00</span>
+            <label for="orange-quantity">Orange Quantity:
+                <input type="number" id="orange-quantity" min="0" step="0.1" value="0">
+            </label>
+            <button class="add-button" onclick="addItem('Orange', 'Fruits')">Order Now</button>
+        </div>
+        <div class="item">
+            <img src="./images/grapes.jpeg" alt="Grapes">
+            <p>Grapes</p>
+            <span >1Kg :RS.850.00</span>
+            <label for="grapes-quantity">Grapes Quantity:
+                <input type="number" id="grapes-quantity" min="0" step="0.1" value="0">
+            </label>
+            <button class="add-button" onclick="addItem('Grapes', 'Fruits')">Order Now</button>
+        </div>
+        <div class="item">
+            <img src="./images/mango.jpeg" alt="Mango">
+            <p>Mango</p>
+            <span >1Kg :RS.450.00</span>
+            <label for="mango-quantity">Mango Quantity:
+                <input type="number" id="mango-quantity" min="0" step="0.1" value="0">
+            </label>
+            <button class="add-button" onclick="addItem('Mango', 'Fruits')">Order Now</button>
+        </div>
+        <div class="item">
+            <img src="./images/pomegranate.jpg" alt="Pomegranate">
+            <p>Pomegranate</p>
+            <span >1Kg :RS.1000.00</span>
+            <label for="pomegranate-quantity">Pomegranate Quantity:
+                <input type="number" id="pomegranate-quantity" min="0" step="0.1" value="0">
+            </label>
+            <button class="add-button" onclick="addItem('Pomegranate', 'Fruits')">Order Now</button>
+        </div>
+    </div>
+    
+</section>
+
+<!-- Vegetables Section -->
+<section id="vegetables">
+    <h2>Vegetables</h2>
+    <div class="product">
+        <div class="item">
+        <img src="./images/carrot.jpeg" alt="Carrot">
+        <p>Carrot</p>
+        <span >1Kg :RS.200.00</span>
+        <label for="carrot-quantity">Carrot Quantity:
+            <input type="number" id="carrot-quantity" min="0" step="0.1" value="0">
+        </label>
+        <button class="add-button" onclick="addItem('Carrot', 'Vegetables')">Order Now</button>
+    </div>
+    <div class="item">
+        <img src="./images/beans.webp" alt="Beans">
+        <p>Beans</p>
+        <span >1Kg :RS.300.00</span>
+        <label for="beans-quantity">Beans Quantity:
+            <input type="number" id="beans-quantity" min="0" step="0.1" value="0">
+        </label>
+        <button class="add-button" onclick="addItem('Beans', 'Vegetables')">Order Now</button>
+    </div>
+    <div class="item">
+        <img src="./images/beetroot.jpg" alt="beet root">
+        <p>Beet Roots</p>
+        <span >1Kg :RS.250.00</span>
+        <label for="beet-root-quantity">Beet-root Quantity:
+            <input type="number" id="beet-root-quantity" min="0" step="0.1" value="0">
+        </label>
+        <button class="add-button" onclick="addItem('beet-root', 'Vegetables')">Order Now</button>
+    </div>
+    <div class="item">
+        <img src="./images/potato.webp" alt="Potato">
+        <p>Potato</p>
+        <span >1Kg :RS.600.00</span>
+        <label for="potato-quantity">Potato Quantity:
+            <input type="number" id="potato-quantity" min="0" step="0.1" value="0">
+        </label>
+        <button class="add-button" onclick="addItem('Potato', 'Vegetables')">Order Now</button>
+    </div>
+    <div class="item">
+        <img src="./images/tomato.jpg" alt="Tomato">
+        <p>Tomato</p>
+        <span >1Kg :RS.320.00</span>
+        <label for="tomato-quantity">Tomato Quantity:
+            <input type="number" id="tomato-quantity" min="0" step="0.1" value="0">
+        </label>
+        <button class="add-button" onclick="addItem('Tomato', 'Vegetables')">Order Now</button></label>
+    </div>
+    <div class="item">
+        <img src="./images/Red-peppers.jpg" alt="bell-pepper">
+        <p>Bell-Pepper</p>
+        <span >1Kg :RS.640.00</span>
+        <label for="bell-pepper-quantity">Bell-Pepper Quantity:
+            <input type="number" id="bell-pepper-quantity" min="0" step="0.1" value="0">
+        </label>
+        <button class="add-button" onclick="addItem('bell-pepper', 'Vegetables')">Order Now</button>
+    </div>
+    </div>
+</section>
+
+<!-- Dairy Produce Section -->
+<section id="dairy-produce">
+    <h2>Dairy Produce</h2>
+    <div class="product">
+        <div class="item">
+            <img src="./images/ancor.png" alt="Milk Powder">
+            <p>Milk Powder</p>
+            <span >1Kg :RS.2000.00</span>
+            <label for="milk-powder-quantity">Milk-powder Quantity:
+                <input type="number" id="milk-powder-quantity" min="0" step="0.1" value="0">
+            </label>
+            <button class="add-button" onclick="addItem('milk-powder', 'Dairy Produce')">Order Now</button>
+        </div>
+        <div class="item">
+            <img src="./images/cheese.jpg" alt="Cheese">
+            <p>Cheese</p>
+            <span >1Kg :RS.1000.00</span>
+            <label for="cheese-quantity">Cheese Quantity:
+                <input type="number" id="cheese-quantity" min="0" step="0.1" value="0">
+            </label>
+            <button class="add-button" onclick="addItem('Cheese', 'Dairy Produce')">Order Now</button>
+        </div>
+        <div class="item">
+            <img src="./images/yogurt.jpeg" alt="Yogurt">
+            <p>Yogurt</p>
+            <span >Unit RS.80.00</span>
+            <label for="yogurt-quantity">Yogurt Quantity:
+                <input type="number" id="yogurt-quantity" min="0" value="0">
+            </label>
+            <button class="add-button" onclick="addItem('Yogurt', 'Dairy Produce')">Order Now</button>
+        </div>
+        <div class="item">
+            <img src="./images/ice cream.webp" alt="Ice-Cream">
+            <p>Ice-Cream</p>
+            <span >Unit RS.1500.00</span>
+            <label for="ice-cream-quantity">Ice-Cream Quantity:
+                <input type="number" id="ice-cream-quantity" min="0" value="0">
+            </label>
+            <button class="add-button" onclick="addItem('Ice-Cream', 'Dairy Produce')">Order Now</button>
+        </div>
+        <div class="item">
+            <img src="./images/wip cream.png" alt="Wip Cream">
+            <p>Wip Cream</p>
+            <span >Unit RS.1200.00</span>
+            <label for="wip-cream-quantity">Wip-Cream Quantity:
+                <input type="number" id="wip-cream-quantity" min="0" value="0">
+            </label>
+            <button class="add-button" onclick="addItem('Wip Cream', 'Dairy Produce')">Order Now</button>
+        </div>
+        <div class="item">
+            <img src="./images/eggs.jpg" alt="Eggs">
+            <p>Eggs</p>
+            <span >1Kg :800.00</span>
+            <label for="eggs-quantity">Eggs Quantity:
+                <input type="number" id="eggs-quantity" min="0" step="0.1" value="0">
+            </label>
+            <button class="add-button" onclick="addItem('Eggs', 'Dairy Produce')">Order Now</button>
+        </div>
+
+    </div>
+    
+</section>
+
+<!-- Meat and Seafood Section -->
+<section id="meat-seafood">
+    <h2>Meat and Seafood</h2>
+    <div class="product">
+        <div class="item">
+            <img src="./images/chicken.webp" alt="Chicken">
+            <p>Chicken</p>
+            <span >1Kg :RS.1200.00</span>
+            <label for="chicken-quantity">Chicken Quantity:
+                <input type="number" id="chicken-quantity" min="0" step="0.1" value="0">
+            </label>
+            <button class="add-button" onclick="addItem('Chicken', 'Meat and Seafood')">Order Now</button>
+        </div>
+        <div class="item">
+            <img src="./images/salmon.jpg" alt="Salmon">
+            <p>Salmon</p>
+            <span >1Kg :RS.1500.00</span>
+            <label for="salmon-quantity">Salmon Quantity:
+                <input type="number" id="salmon-quantity" min="0" step="0.1" value="0">
+            </label>
+            <button class="add-button" onclick="addItem('Salmon', 'Meat and Seafood')">Order Now</button>
+        </div>
+        <div class="item">
+            <img src="./images/beef.webp" alt="Beef">
+            <p>Beef</p>
+            <span >1Kg :RS.1400.00</span>
+            <label for="beef-quantity">Beef Quantity:
+                <input type="number" id="beef-quantity" min="0" step="0.1" value="0">
+            </label>
+            <button class="add-button" onclick="addItem('Beef', 'Meat and Seafood')">Order Now</button>
+        </div>
+        <div class="item">
+            <img src="./images/shrimp.jpeg" alt="Shrimp">
+            <p>Shrimp</p>
+            <span >1Kg :RS.2000.00</span>
+            <label for="shrimp-quantity">Shrimp Quantity:
+                <input type="number" id="shrimp-quantity" min="0" step="0.1" value="0">
+            </label>
+            <button class="add-button"  onclick="addItem('Shrimp', 'Meat and Seafood')">Order Now</button>
+        </div>
+        <div class="item">
+            <img src="./images/me5.webp" alt="Pork">
+            <p>Pork</p>
+            <span >1Kg :RS.890.00</span>
+            <label for="pork-quantity">Pork Quantity:
+                <input type="number" id="pork-quantity" min="0" step="0.1" value="0">
+            </label>
+            <button class="add-button"  onclick="addItem('Pork', 'Meat and Seafood')">Order Now</button>
+        </div>
+        <div class="item">
+            <img src="./images/lamb.webp" alt="Lamb">
+            <p>Lamb</p>
+            <span >1Kg :RS.950.00</span>
+            <label for="lamb-quantity">Lamb Quantity:
+                <input type="number" id="lamb-quantity" min="0" step="0.1" value="0">
+            </label>
+            <button class="add-button"  onclick="addItem('Lamb', 'Meat and Seafood')">Order Now</button>
+        </div>
+    </div>
+    
+</section>
+
+<!-- Baking and Cooking Ingredients Section -->
+<section id="baking-cooking">
+    <h2>Baking and Cooking Ingredients</h2>
+    <div class="product">
+        <div class="item">
+        <img src="./images/flour.jpeg" alt="Flour">
+        <p>Flour</p>
+        <span >1Kg :RS.600.00</span>
+        <label for="flour-quantity">Flour Quantity:
+            <input type="number" id="flour-quantity" min="0" step="0.1" value="0">
+        </label>
+        <button class="add-button"  onclick="addItem('Flour', 'Baking and Cooking Ingredients')">Order Now</button>
+    </div>
+    <div class="item">
+        <img src="./images/sug1.webp" alt="Sugar">
+        <p>Sugar</p>
+        <span >1Kg :RS.800.00</span>
+        <label for="sugar-quantity">Suger Quantity:
+            <input type="number" id="sugar-quantity" min="0" step="0.1" value="0">
+        </label>
+        <button class="add-button"  onclick="addItem('Sugar', 'Baking and Cooking Ingredients')">Order Now</button>
+    </div>
+    <div class="item">
+        <img src="./images/baking powder.jpeg" alt="Baking Powder">
+        <p>Baking Powder</p>
+        <span >1Kg :RS.200.00</span>
+        <label for="baking-powder-quantity">Baking Powder Quantity:
+            <input type="number" id="baking-powder-quantity" min="0" step="0.1" value="0">
+        </label>
+        <button class="add-button"  onclick="addItem('Baking Powder', 'Baking and Cooking Ingredients')">Order Now</button>
+    </div>
+    <div class="item">
+        <img src="./images/salt.webp" alt="salt">
+        <p>Salt</p>
+        <span >1Kg :RS.450.00</span>
+        <label for="salt-quantity">Salt Quantity:
+            <input type="number" id="salt-quantity" min="0" step="0.1" value="0">
+        </label>
+        <button class="add-button"  onclick="addItem('salt', 'Baking and Cooking Ingredients')">Order Now</button>
+    </div>
+    <div class="item">
+        <img src="./images/condanced milk.jpeg" alt="Condanced Milk">
+        <p>Condanced Milk</p>
+        <span > Unit RS.1200.00</span>
+        <label for="condanced-milk-quantity">Condanced Milk Quantity:
+            <input type="number" id="condanced-milk-quantity" min="0"  value="0">
+        </label>
+        <button class="add-button"  onclick="addItem('Condanced Milk', 'Baking and Cooking Ingredients')">Order Now</button>
+    </div>
+    <div class="item">
+        <img src="./images/coco powder.webp" alt="Chocolate Powder">
+        <p>Chocolate Powder</p>
+        <span >1Kg :RS.560.00</span>
+        <label for="chocolate-powder-quantity">Chocolate Powder Quantity:
+            <input type="number" id="chocolate-powder-quantity" min="0" step="0.1" value="0">
+        </label>
+        <button class="add-button"  onclick="addItem('chocolate-powder', 'Baking and Cooking Ingredients')">Order Now</button>
+    </div>
+    </div>
+    
+</section>
+
+<!-- Order Table -->
+<section id="order">
+    <h2>Order Summary</h2>
+    <table id="order-table">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Category</th>
+                <th>Quantity (Kg)</th>
+                <th>Price</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Order items will be added here -->
+        </tbody>
+    </table>
+    <p>Total: <span id="total-price">Rs0.00</span></p>
+    <button class="add-favorite" onclick="addToFavourites()">Add to Favourites</button>
+    <button class="apply-favorite" onclick="applyFavourites()">Apply Favourites</button>
+    <button class="clear-favorite" onclick="clearLocalStorage()">Clear Your Favourites</button>
+    <button class="buy-favorite" onclick="navigateToCheckout()">Buy Now</button>
+
+
+</section>
+
+</section>
+
+<!--Footer-->
+<footer class="footer" style="margin-top: 20px;">
+    <section class="conatainer">
+      <section class="row">
+        <section class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="./aboutuspage.html">About Us</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        
+          </ul>
+        </section>
+        <section class="footer-col">
+          <h4>Get Help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Order Status</a></li>
+          </ul>
+        </section>
+        <section class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Grocery</a></li>
+            <li><a href="#">Island Delivery</a></li>
+          </ul>
+        </section>
+        <section class="footer-col">
+            <h4>Follow Us</h4>
+            
+            <ul class="socialmedia">
+              <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+              <li><a href="#"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+              <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+            </ul>
+        </section>
+      </section>
+    </section>
+  
+  
+  </footer>
+  
+    </body>
+    </html>
+
+    
+
+
+
+
+
+
